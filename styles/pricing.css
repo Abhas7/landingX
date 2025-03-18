@@ -1,0 +1,127 @@
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.pricing-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card.featured {
+  border: 2px solid #3b82f6;
+  transform: scale(1.05);
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.featured:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pricing-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.pricing-badge {
+  background-color: #3b82f6;
+  color: white;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.pricing-price {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.pricing-period {
+  color: #666;
+  font-size: 1rem;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  flex-grow: 1;
+}
+
+.pricing-feature {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.pricing-feature i {
+  color: #3b82f6;
+  margin-right: 10px;
+}
+
+.pricing-feature.disabled {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.pricing-feature.disabled i {
+  color: #999;
+}
+
+.pricing-action {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .pricing-card {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pricing-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .pricing-card.featured {
+    transform: none;
+    order: -1;
+  }
+  
+  .pricing-card.featured:hover {
+    transform: translateY(-10px);
+  }
+}
