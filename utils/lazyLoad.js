@@ -13,7 +13,7 @@ function useLazyLoad(elementRef, threshold = 0.1) {
         { threshold }
       );
 
-      const currentElement = elementRef.current;
+      const currentElement =   elementRef.current;
       if (currentElement) {
         observer.observe(currentElement);
       }
